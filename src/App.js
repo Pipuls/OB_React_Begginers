@@ -1,10 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
+//import GreetingStyled from './components/pure/greetingStyled';
+import Clock from './ejercicios/clock';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
-// import TaskListComponent from './components/container/task_list';
-import ContactListComponent from './components/container/contact_list';
-
+//import TaskListComponent from './components/container/task_list';
+//import ContactListComponent from './components/container/contact_list';
+// import Ejemplo1 from './hooks/Ejemplo1';
+// import Ejemplo2 from './hooks/Ejemplo2';
+//import MiComponenteConContexto from './hooks/Ejemplo3';
+//import Ejemplo4 from './hooks/Ejemplo4';
 
 function App() {
   return (
@@ -17,7 +22,15 @@ function App() {
         {/* <GreetingF name="Germán"/> */}
         {/* Componente de listado de tarea */}
         {/* <TaskListComponent/> */}
-        <ContactListComponent/>
+        {/* <ContactListComponent/> */}
+        {/* Ejemplos de usos de hooks */}
+        {/* <Ejemplo1/> */}
+        {/* <Ejemplo2/> */}
+        {/* <MiComponenteConContexto/> */}
+        {/* <Ejemplo4 nombre="PEPE"/>
+        <h3> contenido del props.children</h3> */}
+        {/* <GreetingStyled name="Germán"/> */}
+        <Clock/>
       </header>
     </div>
   );
