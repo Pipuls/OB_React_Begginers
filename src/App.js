@@ -1,10 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
 //import GreetingStyled from './components/pure/greetingStyled';
-import Clock from './ejercicios/clock';
+//import Clock from './ejercicios/clock';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
-//import TaskListComponent from './components/container/task_list';
+import TaskListComponent from './components/container/task_list';
 //import ContactListComponent from './components/container/contact_list';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
@@ -14,14 +14,13 @@ import Clock from './ejercicios/clock';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      {/* <header className="App-header"> */}
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
         {/*componente propio Greeting.jsx*/}
         {/* <Greeting name="Lalala"/> */}
         {/* Componente de ejemplo funcional */}
         {/* <GreetingF name="Germán"/> */}
         {/* Componente de listado de tarea */}
-        {/* <TaskListComponent/> */}
         {/* <ContactListComponent/> */}
         {/* Ejemplos de usos de hooks */}
         {/* <Ejemplo1/> */}
@@ -30,8 +29,11 @@ function App() {
         {/* <Ejemplo4 nombre="PEPE"/>
         <h3> contenido del props.children</h3> */}
         {/* <GreetingStyled name="Germán"/> */}
-        <Clock/>
-      </header>
+        {/* <Clock/> */}
+      {/* </header> */}
+
+        <TaskListComponent/>
+
     </div>
   );
 }
