@@ -1,10 +1,12 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
 //import GreetingStyled from './components/pure/greetingStyled';
 //import Clock from './ejercicios/clock';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
-import TaskListComponent from './components/container/task_list';
+//import TaskListComponent from './components/container/task_list';
+import ContactList from './ejercicios/leccion 9/contact_list';
+//import Father from './components/container/father';
 //import ContactListComponent from './components/container/contact_list';
 // import Ejemplo1 from './hooks/Ejemplo1';
 // import Ejemplo2 from './hooks/Ejemplo2';
@@ -30,9 +32,11 @@ function App() {
         <h3> contenido del props.children</h3> */}
         {/* <GreetingStyled name="Germán"/> */}
         {/* <Clock/> */}
-      {/* </header> */}
-
-        <TaskListComponent/>
+        {/* </header> */}
+        {/* Gestion de eventos*/}
+        {/* <Father/> */}
+        {/* <TaskListComponent/> */}
+        <ContactList/>
 
     </div>
   );
