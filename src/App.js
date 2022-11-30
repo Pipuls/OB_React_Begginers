@@ -4,8 +4,10 @@ import './App.css';
 //import Clock from './ejercicios/clock';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
-//import TaskListComponent from './components/container/task_list';
-import ContactList from './ejercicios/leccion 9/contact_list';
+import TaskListComponent from './components/container/task_list';
+import OptionalRender from './components/pure/optionalRender';
+import EjLeccion12 from './ejercicios/leccion 12/ej-leccion-12';
+//import ContactList from './ejercicios/leccion 9/contact_list';
 //import Father from './components/container/father';
 //import ContactListComponent from './components/container/contact_list';
 // import Ejemplo1 from './hooks/Ejemplo1';
@@ -31,13 +33,20 @@ function App() {
         {/* <Ejemplo4 nombre="PEPE"/>
         <h3> contenido del props.children</h3> */}
         {/* <GreetingStyled name="Germán"/> */}
+        {/* Ejercicio leccion 8 */}
         {/* <Clock/> */}
         {/* </header> */}
         {/* Gestion de eventos*/}
         {/* <Father/> */}
-        {/* <TaskListComponent/> */}
-        <ContactList/>
+        {/* Ejercicio leccion 9 */}
+        {/* <ContactList/> */}
+        {/* Ejemplos de renderizado condicional */}
+        {/* <OptionalRender/> */}
+        {/* Ejercicio leccion 12 */}
+        <EjLeccion12/>
 
+        {/* PROYECTO FINAL */}
+        {/* <TaskListComponent/> */}
     </div>
   );
 }
