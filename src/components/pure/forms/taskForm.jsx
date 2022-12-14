@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { LEVELS } from '../../../models/levels.enums';
 import { Task } from '../../../models/task.class';
 
-const TaskForm = ({add}) => {
+const TaskForm = ({add, lenght}) => {
 
     const nameRef = useRef('');
     const descriptionRef = useRef('');
@@ -20,6 +20,18 @@ const TaskForm = ({add}) => {
         );
         add(newTask);
     }
+    const normalStyle = {
+        color: 'green',
+        fontWeight: 'bold'
+    }
+    const urgentStyle = {
+        color: 'yellow',
+        fontWeight: 'bold'
+    }
+    const blockingStyle = {
+        color: 'red',
+        fontWeight: 'bold'
+    }
     
     return (
         <div>
@@ -29,7 +41,7 @@ const TaskForm = ({add}) => {
                         ref={nameRef} 
                         id='inputName' 
                         type='text' 
-                        className='form-control form-control-lg' 
+                        className='form-control form-control-lg my-2' 
                         placeholder='Nombre de la tarea'
                         autoFocus
                         required />
@@ -37,32 +49,35 @@ const TaskForm = ({add}) => {
                         ref={descriptionRef} 
                         id='inputDescription' 
                         type='text' 
-                        className='form-control form-control-lg'
+                        className='form-control form-control-lg my-2'
                         placeholder='Descripción-  de la tarea' 
                         required />
-                    <label htmlFor='selectLevel' className='sr-only'>Prioridad</label>
-                    <select ref={levelRef} defaultValue={LEVELS.NORMAL} id='selectLevel'>
-                        <option value={LEVELS.NORMAL}>
+                    <select 
+                        className='form-control form-control-lg my-2'
+                        ref={levelRef} defaultValue={LEVELS.NORMAL} 
+                        id='selectLevel'>
+                        <option style={normalStyle} value={LEVELS.NORMAL}>
                             Normal
                         </option>
-                        <option value={LEVELS.URGENT}>
+                        <option style={urgentStyle} value={LEVELS.URGENT}>
                             Urgente
                         </option>
-                        <option value={LEVELS.BLOCKING}>
+                        <option style={blockingStyle} value={LEVELS.BLOCKING}>
                             Prioritario
                         </option>
                     </select>
+                    <button type='submit' className='btn btn-primary btn-lg ms-2 '>
+                        {lenght > 0 ? 'Nueva Tarea' : 'Crear Tarea'}
+                    </button>
                 </div>
-                <button type='submit' className='btn btn-primary btn-lg ms-2'>
-                    Agregar Tarea
-                </button>
             </form>
         </div>
     );
 }
 
 TaskForm.protoTypes = {
-    add: PropTypes.func.isRequired
+    add: PropTypes.func.isRequired,
+    lenght: PropTypes.number.isRequired,
 }
 
 export default TaskForm;

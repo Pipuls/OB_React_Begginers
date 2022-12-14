@@ -4,9 +4,12 @@ import './App.css';
 //import Clock from './ejercicios/clock';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
-import TaskListComponent from './components/container/task_list';
-import OptionalRender from './components/pure/optionalRender';
-import EjLeccion12 from './ejercicios/leccion 12/ej-leccion-12';
+//import TaskListComponent from './components/container/task_list';
+import LoginFormik from './components/pure/forms/loginFormik';
+import RegisterFormik from './components/pure/forms/registerFormik';
+import CrearTarea from './ejercicios/leccion 15/components/forms/crearTarea';
+//import OptionalRender from './components/pure/optionalRender';
+//import EjLeccion12 from './ejercicios/leccion 12/ej-leccion-12';
 //import ContactList from './ejercicios/leccion 9/contact_list';
 //import Father from './components/container/father';
 //import ContactListComponent from './components/container/contact_list';
@@ -43,7 +46,12 @@ function App() {
         {/* Ejemplos de renderizado condicional */}
         {/* <OptionalRender/> */}
         {/* Ejercicio leccion 12 */}
-        <EjLeccion12/>
+        {/* <EjLeccion12/> */}
+        {/* Ejemplos de uso de formik y yup */}
+        <LoginFormik/>
+        <RegisterFormik/>
+        {/* Ejercicio leccion 15 */}
+        <CrearTarea/>
 
         {/* PROYECTO FINAL */}
         {/* <TaskListComponent/> */}

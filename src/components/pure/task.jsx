@@ -1,5 +1,7 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
+
+//modelos
 import { Task } from '../../models/task.class';
 import { LEVELS } from '../../models/levels.enums';
 
@@ -7,7 +9,7 @@ import { LEVELS } from '../../models/levels.enums';
 import '../../styles/task.scss';
 
 
-const TaskComponent = ({ task, complete, remove }) => {
+const TaskComponent = ({ task, completed, remove }) => {
 
     useEffect(() => {
         console.log('Task created')
@@ -49,19 +51,33 @@ const TaskComponent = ({ task, complete, remove }) => {
     function taskIconCompleted(){
         if(task.completed){
             return (<i 
-                        onClick={() => complete(task)} 
+                        onClick={() => completed(task)} 
                         className='bi bi-toggle-on fw-bold fs-4 task-action' 
                         style={{color: 'green'}}></i>)
         } else {
             return (<i 
-                        onClick={() => complete(task)} 
+                        onClick={() => completed(task)} 
                         className='bi bi-toggle-off fw-bold fs-4 task-action' 
                         style={{color: 'grey'}}></i>)
         }
     }
 
+    const taskCompleted = {
+        backgroundColor: 'grey',
+        color: 'tomato',
+        textDecoration: 'line-through'
+    };
+
+    const taskPending = {
+        backgroundColor: 'aquamarine',
+        color: 'black',
+        fontWeight: 'bold',
+        textDecoration: 'none'
+    };
+
+
     return (
-        <tr className='fw-normal'>
+        <tr className='fw-normal' style={task.completed ? taskCompleted : taskPending}>
             <th>
                 <span className='ms-2'>{task.name}</span>
             </th>
@@ -87,7 +103,7 @@ const TaskComponent = ({ task, complete, remove }) => {
 
 TaskComponent.propTypes = {
     task: PropTypes.instanceOf(Task).isRequired,
-    complete: PropTypes.func.isRequired,
+    completed: PropTypes.func.isRequired,
     remove: PropTypes.func.isRequired
 };
 
