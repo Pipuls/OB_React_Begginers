@@ -7,7 +7,7 @@ import './App.css';
 //import TaskListComponent from './components/container/task_list';
 import LoginFormik from './components/pure/forms/loginFormik';
 import RegisterFormik from './components/pure/forms/registerFormik';
-import CrearTarea from './ejercicios/leccion 15/components/forms/crearTarea';
+//import CrearTarea from './ejercicios/leccion 15/components/forms/crearTarea';
 //import OptionalRender from './components/pure/optionalRender';
 //import EjLeccion12 from './ejercicios/leccion 12/ej-leccion-12';
 //import ContactList from './ejercicios/leccion 9/contact_list';
@@ -51,7 +51,8 @@ function App() {
         <LoginFormik/>
         <RegisterFormik/>
         {/* Ejercicio leccion 15 */}
-        <CrearTarea/>
+        {/* <CrearTarea/> */}
+
 
         {/* PROYECTO FINAL */}
         {/* <TaskListComponent/> */}
