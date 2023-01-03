@@ -1,12 +1,16 @@
 //import logo from './logo.svg';
 import './App.css';
+import AxiosExample from './components/pure/AxiosExample';
+//import FetchExample from './components/pure/FetchExample';
+//import AsyncExample from './components/pure/AsyncExample';
 //import GreetingStyled from './components/pure/greetingStyled';
 //import Clock from './ejercicios/clock';
 // import Greeting from './components/pure/greeting';
 // import GreetingF from './components/pure/greetingF';
 //import TaskListComponent from './components/container/task_list';
-import LoginFormik from './components/pure/forms/loginFormik';
-import RegisterFormik from './components/pure/forms/registerFormik';
+//import LoginFormik from './components/pure/forms/loginFormik';
+//import RegisterFormik from './components/pure/forms/registerFormik';
+//import ObservableExample from './components/pure/ObservableExample';
 //import CrearTarea from './ejercicios/leccion 15/components/forms/crearTarea';
 //import OptionalRender from './components/pure/optionalRender';
 //import EjLeccion12 from './ejercicios/leccion 12/ej-leccion-12';
@@ -48,11 +52,14 @@ function App() {
         {/* Ejercicio leccion 12 */}
         {/* <EjLeccion12/> */}
         {/* Ejemplos de uso de formik y yup */}
-        <LoginFormik/>
-        <RegisterFormik/>
+        {/* <LoginFormik/>
+        <RegisterFormik/> */}
         {/* Ejercicio leccion 15 */}
         {/* <CrearTarea/> */}
-
+        {/* <AsyncExample></AsyncExample> */}
+        {/* <ObservableExample></ObservableExample> */}
+        {/* <FetchExample></FetchExample> */}
+        <AxiosExample></AxiosExample>
 
         {/* PROYECTO FINAL */}
         {/* <TaskListComponent/> */}
